@@ -14,15 +14,15 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif; /* Stylish font */
-            background-color: #f4f4f9; /* Light background */
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
             color: #333;
             scroll-behavior: smooth;
         }
 
         /* Navigation Bar Styling */
         nav {
-            background-color: #337ab7; /* Blue */
+            background-color: #337ab7;
             padding: 10px 20px;
             text-align: center;
         }
@@ -45,12 +45,12 @@
         }
 
         nav ul li a:hover {
-            color: #ffd700; /* Gold for hover effect */
+            color: #ffd700;
         }
 
         /* Header styling */
         header {
-            background-color: #d9534f; /* Red */
+            background-color: #d9534f;
             color: #fff;
             padding: 40px;
             text-align: center;
@@ -72,7 +72,7 @@
             margin-top: 20px;
         }
 
-        /* About and Contact Image Styling */
+        /* Section Image Styling */
         .section-image {
             max-width: 100%;
             height: auto;
@@ -80,73 +80,14 @@
             border-radius: 8px;
         }
 
-        /* Service Section Styling */
-        #services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .service {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 22%;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .service:hover {
-            transform: scale(1.05);
-        }
-
-        .service img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .service h3 {
-            font-size: 1.5em;
-            color: #337ab7;
-            padding: 15px 0;
-        }
-
-        .service p {
-            font-size: 1em;
-            padding: 0 15px 15px;
-            color: #555;
-        }
-
         /* Footer styling */
         footer {
-            background-color: #337ab7; /* Blue */
+            background-color: #337ab7;
             color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 0.9em;
             margin-top: 20px;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            #services {
-                flex-direction: column;
-            }
-
-            .service {
-                width: 100%;
-            }
-        }
-
-        /* Logo Styling */
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -164,9 +105,7 @@
 
     <!-- Header Section with Logo -->
     <header id="home">
-        <!-- Logo Image from AlPa-Advertising/home.jpg -->
-        <img src="AlPa-Advertising/home.jpg" alt="AlPa Advertising Logo" class="logo">
-        
+        <img src="AlPa-Advertising/home.jpg" alt="AlPa Advertising Logo" class="section-image">
         <h1>Welcome to AlPa Advertising</h1>
         <p>A website dedicated to helping businesses reach their target audience effectively through tailored advertising solutions.</p>
     </header>
@@ -174,7 +113,6 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Us</h2>
-        <!-- Image for About Section -->
         <img src="https://www.marketing91.com/wp-content/uploads/2019/06/What-is-Advertising-1.jpg" alt="About AlPa Advertising" class="section-image">
         <p>AlPa Advertising was established to provide top-tier advertising solutions that connect businesses with their target audience. With a dedicated team of experts, we strive to offer innovative and effective marketing strategies that cater to various industries.</p>
     </section>
@@ -182,10 +120,20 @@
     <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
-        
-        <!-- Digital Marketing Image (from external URL) -->
-        <img src="https://www.techicy.com/wp-content/uploads/2018/04/Digital-Marketing.jpg" alt="Digital Marketing" class="section-image">
-        <p>We offer a variety of services that help businesses grow in the digital landscape. From SEO to social media marketing, we ensure that your brand reaches the right audience at the right time.</p>
+
+        <!-- Digital Marketing Service -->
+        <article class="service">
+            <h3>Digital Marketing</h3>
+            <img src="https://www.techicy.com/wp-content/uploads/2018/04/Digital-Marketing.jpg" alt="Digital Marketing" class="section-image">
+            <p>Our digital marketing services include SEO, social media marketing, and email campaigns to ensure your brand reaches the right audience.</p>
+        </article>
+
+        <!-- Content Creation Service -->
+        <article class="service">
+            <h3>Content Creation</h3>
+            <img src="https://thought-starters.com/images/contentCreationl.jpg" alt="Content Creation" class="section-image">
+            <p>We provide high-quality content creation services, including blogs, videos, and graphics to engage your target audience.</p>
+        </article>
     </section>
 
     <!-- Contact Us Section -->
