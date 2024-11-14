@@ -14,16 +14,36 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
             color: #333;
             scroll-behavior: smooth;
+            /* Futuristic Gradient Background */
+            background: linear-gradient(135deg, #2b2e4a, #2d334a, #456990);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #337ab7;
+            background-color: rgba(51, 122, 183, 0.8);
             padding: 10px 20px;
             text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
         nav ul {
             list-style: none;
@@ -45,11 +65,13 @@
 
         /* Header and Home Logo */
         header {
-            background-color: #d9534f;
+            background-color: rgba(217, 83, 79, 0.9);
             color: #fff;
             padding: 40px;
             text-align: center;
             position: relative;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
         }
         header h1 {
             font-size: 2.5em;
@@ -71,65 +93,16 @@
             100% { opacity: 1; }
         }
 
-        /* Section Styling */
-        section {
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        /* Service Section */
-        #services {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .service {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 400px;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .service img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
-        }
-        .service h3 {
-            font-size: 1.5em;
-            color: #337ab7;
-            padding: 15px 0;
-        }
-        .service p {
-            font-size: 1em;
-            padding: 0 15px 15px;
-            color: #555;
-        }
-
-        /* Contact Section */
-        #contact ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-        }
-        .contact-img {
-            width: 200px;
-            height: auto;
-            border-radius: 8px;
-        }
-
         /* Footer */
         footer {
-            background-color: #337ab7;
+            background-color: rgba(51, 122, 183, 0.8);
             color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 0.9em;
             margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
