@@ -72,11 +72,11 @@
             margin-top: 20px;
         }
 
-        /* Enlarged Home Logo Styling */
+        /* Home Logo Styling (Reverted to 600px) */
         .home-logo {
             max-width: 100%;
             height: auto;
-            width: 1200px; /* Set a specific width to make it larger */
+            width: 600px; /* Reverted to 600px */
             margin: 20px auto;
             display: block;
             border-radius: 8px;
@@ -86,10 +86,17 @@
         .section-image {
             max-width: 100%;
             height: auto;
-            width: 600px;
+            width: 600px; /* Default size for other images */
             margin: 20px auto;
             display: block;
             border-radius: 8px;
+        }
+
+        /* Reduced Service Image Size (400px) */
+        .service img {
+            width: 400px; /* Reduced service images to 400px width */
+            height: auto;
+            border-bottom: 1px solid #ddd;
         }
 
         /* Footer styling */
@@ -115,7 +122,7 @@
         </ul>
     </nav>
 
-    <!-- Header Section with Enlarged Logo -->
+    <!-- Header Section with Home Logo -->
     <header id="home">
         <h1>Welcome to</h1>
         <img src="home.jpg" alt="AlPat Advertising Logo" class="home-logo">
