@@ -1,4 +1,4 @@
-# AlPa Advertising
+# AlPat Advertising
 
 AlPa Advertising is a digital marketing website designed to help businesses effectively reach their target audience. The website showcases our advertising services, success stories, and provides a way for potential clients to connect with us. The website is responsive and optimized for all devices.
 
