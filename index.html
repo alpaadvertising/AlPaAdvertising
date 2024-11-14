@@ -6,7 +6,7 @@
     <title>AlPa Advertising</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset */
+        /* Reset basic styling */
         * {
             margin: 0;
             padding: 0;
@@ -14,19 +14,23 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif; /* Stylish font */
+            background-color: #f4f4f9; /* Light background */
             color: #333;
-            background-color: #f4f4f4;
+            scroll-behavior: smooth;
         }
 
-        /* Navigation Styles */
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #337ab7; /* Blue */
+            padding: 10px 20px;
+            text-align: center;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            background-color: #333;
-            padding: 10px;
         }
 
         nav ul li {
@@ -37,74 +41,105 @@
             color: #fff;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1em;
         }
 
         nav ul li a:hover {
-            color: #f39c12;
+            color: #ffd700; /* Gold for hover effect */
         }
 
-        /* Header Section */
+        /* Header styling */
         header {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #e74c3c;
+            background-color: #d9534f; /* Red */
             color: #fff;
-        }
-
-        .logo {
-            max-width: 150px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
+            padding: 40px;
+            text-align: center;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin: 20px 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.2em;
         }
 
-        /* Section Styles */
+        /* Section Styling */
         section {
-            padding: 40px 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* About and Contact Image Styling */
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        /* Service Section Styling */
+        #services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 22%;
+            overflow: hidden;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #333;
+        .service:hover {
+            transform: scale(1.05);
         }
 
-        section p {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
+        .service img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            color: #337ab7;
+            padding: 15px 0;
+        }
+
+        .service p {
+            font-size: 1em;
+            padding: 0 15px 15px;
             color: #555;
         }
 
-        .section-image {
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-
-        /* Footer Styles */
+        /* Footer styling */
         footer {
+            background-color: #337ab7; /* Blue */
+            color: #fff;
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: #fff;
+            font-size: 0.9em;
+            margin-top: 20px;
         }
 
-        footer p {
-            font-size: 1rem;
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            #services {
+                flex-direction: column;
+            }
+
+            .service {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -122,7 +157,7 @@
 
     <!-- Header Section with Logo -->
     <header id="home">
-        <!-- Logo Image (Changed to home.jpg) -->
+        <!-- Logo Image (home.jpg) -->
         <img src="images/home.jpg" alt="AlPa Advertising Logo" class="logo">
         
         <h1>Welcome to AlPa Advertising</h1>
