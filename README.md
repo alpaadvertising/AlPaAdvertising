@@ -18,6 +18,7 @@ The website consists of the following main sections:
 - **About**: A section detailing what AlPa Advertising is about, including an image that visually explains the advertising industry.
 - **Services**: A section highlighting various services we offer, such as Digital Marketing, Brand Strategy, Content Creation, and Market Analysis.
 - **Contact**: A section where clients can get in touch with us through email or phone.
+- **Social Media Management**: Build and maintain a strong online presence across social media platforms.
 
 ### Folder Structure
 
