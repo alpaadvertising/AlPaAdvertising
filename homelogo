@@ -1,0 +1,11 @@
+<header id="home">
+    <!-- Logo Image -->
+    <img src="images/logo.jpg" alt="AlPa Advertising Logo" class="logo">
+    
+    <h1>Welcome to AlPa Advertising</h1>
+    <p>A website dedicated to helping businesses reach their target audience effectively through tailored advertising solutions.</p>
+</header>
+
+
+
+
