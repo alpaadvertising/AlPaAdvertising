@@ -14,16 +14,49 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
             color: #333;
             scroll-behavior: smooth;
+            /* Futuristic Gradient Background */
+            background: linear-gradient(135deg, #2b2e4a, #2d334a, #456990);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Us Section */
+        #about h2, #about p {
+            color: #1e3a8a; /* Metallic Blue */
+        }
+
+        /* About Us Image */
+        #about img {
+            width: 300px; /* Resized to 300px width */
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #337ab7;
+            background-color: rgba(51, 122, 183, 0.8);
             padding: 10px 20px;
             text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
         nav ul {
             list-style: none;
@@ -45,11 +78,13 @@
 
         /* Header and Home Logo */
         header {
-            background-color: #d9534f;
+            background-color: rgba(217, 83, 79, 0.9);
             color: #fff;
             padding: 40px;
             text-align: center;
             position: relative;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
         }
         header h1 {
             font-size: 2.5em;
@@ -71,65 +106,58 @@
             100% { opacity: 1; }
         }
 
-        /* Section Styling */
-        section {
-            padding: 20px;
-            margin-top: 20px;
+        /* Services Section */
+        #services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
         }
 
-        /* Service Section */
-        #services {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
         .service {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 400px;
+            width: 100%;
             overflow: hidden;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            padding: 20px;
         }
+
         .service img {
             width: 100%;
             height: auto;
             border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
         }
+
         .service h3 {
             font-size: 1.5em;
             color: #337ab7;
-            padding: 15px 0;
         }
+
         .service p {
             font-size: 1em;
             padding: 0 15px 15px;
             color: #555;
         }
 
-        /* Contact Section */
-        #contact ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-        }
-        .contact-img {
-            width: 200px;
-            height: auto;
-            border-radius: 8px;
+        .service:hover {
+            transform: translateY(-10px);
         }
 
         /* Footer */
         footer {
-            background-color: #337ab7;
+            background-color: rgba(51, 122, 183, 0.8);
             color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 0.9em;
             margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
@@ -171,7 +199,7 @@
             <p>Detailed market insights to inform strategic decisions.</p>
         </div>
         <div class="service">
-            <img src="socialmedia-management.jpg" alt="Social Media Management">
+            <img src="https://www.airwebsolutions.com/wp-content/uploads/2020/07/social-media-management.png" alt="Social Media Management">
             <h3>Social Media Management</h3>
             <p>Expert management to build and sustain your social media presence.</p>
         </div>
@@ -181,7 +209,7 @@
     <section id="about">
         <h2>About AlPat Advertising</h2>
         <p>AlPat Advertising is a dynamic agency focused on innovative advertising solutions for modern businesses.</p>
-        <img src="https://www.brandignity.com/wp-content/uploads/2016/11/42752675_ml.jpg" alt="About AlPat Advertising" class="section-image" style="width: 300px;">
+        <img src="https://www.brandignity.com/wp-content/uploads/2016/11/42752675_ml.jpg" alt="About AlPat Advertising" class="section-image">
     </section>
 
     <!-- Contact Us Section -->
@@ -194,7 +222,7 @@
             </li>
             <li>
                 <p>Aldrin: <a href="mailto:aldrin@alpatadvertising.com">aldrin@alpatadvertising.com</a></p>
-                <img src="https://your-uploaded-image-url.com/aldrin.jpg" alt="Aldrin" class="contact-img">
+                <img src="https://www.canva.com/design/DAGWfhjiHTc/4CwbNJXGottyioPHcdFCiA/edit?utm_content=DAGWfhjiHTc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" alt="Aldrin" class="contact-img"> <!-- Replace with Aldrin's image URL -->
             </li>
             <li>
                 <p>Patrick: <a href="mailto:patrick@alpatadvertising.com">patrick@alpatadvertising.com</a></p>
