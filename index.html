@@ -4,7 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlPat Advertising</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #337ab7;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        header img.logo {
+            max-width: 600px;
+            height: auto;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* About and Contact Image Styling */
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        /* Service Section Styling */
+        #services {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 80%;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service img {
+            width: 400px;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            color: #337ab7;
+            padding: 15px 0;
+        }
+
+        .service p {
+            font-size: 1em;
+            padding: 0 15px 15px;
+            color: #555;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #337ab7;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        
+        /* Contact images */
+        .contact-img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -17,8 +163,8 @@
     </nav>
 
     <header id="home">
-        <h1 class="fade-in">Welcome to</h1>
-        <img src="home.jpg" alt="AlPat Advertising Logo" class="logo-bounce">
+        <h1>Welcome to</h1>
+        <img src="home.jpg" alt="AlPat Advertising Logo" class="logo">
     </header>
 
     <main>
@@ -30,17 +176,17 @@
                 <p>Boost your business with our effective digital marketing strategies.</p>
             </div>
             <div class="service">
-                <img src="market-analysis.jpg" alt="Market Analysis">
+                <img src="https://assets-global.website-files.com/619cef5c40cb8925cd33ece3/621e3c7d8af59d07911c0762_619cef5c40cb896d2f33f544_template-vignette-ETUDE-DE-MARCHE-1200x900-EN.png" alt="Market Analysis">
                 <h3>Market Analysis</h3>
                 <p>Understand your market better with our in-depth analysis services.</p>
             </div>
             <div class="service">
-                <img src="content-creation.jpg" alt="Content Creation">
+                <img src="https://thought-starters.com/images/contentCreationl.jpg" alt="Content Creation">
                 <h3>Content Creation</h3>
                 <p>Create engaging content tailored to your brand’s voice.</p>
             </div>
             <div class="service">
-                <img src="social-media-management.jpg" alt="Social Media Management">
+                <img src="https://www.airwebsolutions.com/wp-content/uploads/2020/07/social-media-management.png" alt="Social Media Management">
                 <h3>Social Media Management</h3>
                 <p>Enhance your online presence with our social media management services.</p>
             </div>
@@ -49,6 +195,7 @@
         <section id="about">
             <h2>About Us</h2>
             <p>AlPat Advertising is dedicated to connecting businesses with their target audience effectively.</p>
+            <img src="https://www.marketing91.com/wp-content/uploads/2019/06/What-is-Advertising-1.jpg" alt="About Us Image" class="section-image">
         </section>
 
         <section id="contact">
