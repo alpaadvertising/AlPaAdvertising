@@ -37,6 +37,28 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Contact Us Section */
+        #contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        #contact ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #contact ul li p {
+            font-size: 1.1em;
+            margin-left: 15px;
+        }
+        .contact-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
         /* About Us Section */
         #about h2, #about p {
             color: #1e3a8a; /* Metallic Blue */
@@ -104,48 +126,6 @@
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
-        }
-
-        /* Services Section */
-        #services {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .service {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 100%;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            padding: 20px;
-        }
-
-        .service img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 15px;
-        }
-
-        .service h3 {
-            font-size: 1.5em;
-            color: #337ab7;
-        }
-
-        .service p {
-            font-size: 1em;
-            padding: 0 15px 15px;
-            color: #555;
-        }
-
-        .service:hover {
-            transform: translateY(-10px);
         }
 
         /* Footer */
@@ -217,16 +197,16 @@
         <h2>Contact Us</h2>
         <ul>
             <li>
-                <p>Allellujah: <a href="mailto:allellujah@alpatadvertising.com">allellujah@alpatadvertising.com</a></p>
                 <img src="email1.jpg" alt="Allellujah" class="contact-img">
+                <p>Allellujah: <a href="mailto:allellujah@alpatadvertising.com">allellujah@alpatadvertising.com</a></p>
             </li>
             <li>
+                <img src="aldrin.jpg" alt="Aldrin" class="contact-img"> <!-- Add Aldrin's image here -->
                 <p>Aldrin: <a href="mailto:aldrin@alpatadvertising.com">aldrin@alpatadvertising.com</a></p>
-                <img src="aldrin.jpg" alt="Aldrin" class="contact-img"> <!-- Updated image for Aldrin -->
             </li>
             <li>
-                <p>Patrick: <a href="mailto:patrick@alpatadvertising.com">patrick@alpatadvertising.com</a></p>
                 <img src="email3.jpg" alt="Patrick" class="contact-img">
+                <p>Patrick: <a href="mailto:patrick@alpatadvertising.com">patrick@alpatadvertising.com</a></p>
             </li>
         </ul>
     </section>
