@@ -37,39 +37,22 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Contact Us Section */
-        #contact ul {
-            list-style: none;
-            padding: 0;
-        }
-        #contact ul li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        #contact ul li p {
-            font-size: 1.1em;
-            margin-left: 15px;
-        }
-        .contact-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-
         /* About Us Section */
         #about h2, #about p {
             color: #1e3a8a; /* Metallic Blue */
         }
 
-        /* About Us Image */
-        #about img {
-            width: 300px; /* Resized to 300px width */
-            height: auto;
+        #about .images-container {
+            display: flex;
+            justify-content: space-around;
             margin-top: 20px;
+        }
+
+        #about .images-container img {
+            width: 30%;
+            height: auto;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Navigation Bar */
@@ -189,25 +172,20 @@
     <section id="about">
         <h2>About AlPat Advertising</h2>
         <p>AlPat Advertising is a dynamic agency focused on innovative advertising solutions for modern businesses.</p>
-        <img src="https://www.brandignity.com/wp-content/uploads/2016/11/42752675_ml.jpg" alt="About AlPat Advertising" class="section-image">
+        <div class="images-container">
+            <img src="about-image1.jpg" alt="About Us Image 1">
+            <img src="about-image2.jpg" alt="About Us Image 2">
+            <img src="about-image3.jpg" alt="About Us Image 3">
+        </div>
     </section>
 
     <!-- Contact Us Section -->
     <section id="contact">
         <h2>Contact Us</h2>
         <ul>
-            <li>
-                <img src="email1.jpg" alt="Allellujah" class="contact-img">
-                <p>Allellujah: <a href="mailto:allellujah@alpatadvertising.com">allellujah@alpatadvertising.com</a></p>
-            </li>
-            <li>
-                <img src="aldrin.jpg" alt="Aldrin" class="contact-img"> <!-- Aldrin's photo here -->
-                <p>Aldrin: <a href="mailto:aldrin@alpatadvertising.com">aldrin@alpatadvertising.com</a></p>
-            </li>
-            <li>
-                <img src="email3.jpg" alt="Patrick" class="contact-img">
-                <p>Patrick: <a href="mailto:patrick@alpatadvertising.com">patrick@alpatadvertising.com</a></p>
-            </li>
+            <li>Allellujah: <a href="mailto:allellujah@alpatadvertising.com">allellujah@alpatadvertising.com</a></li>
+            <li>Aldrin: <a href="mailto:aldrin@alpatadvertising.com">aldrin@alpatadvertising.com</a></li>
+            <li>Patrick: <a href="mailto:patrick@alpatadvertising.com">patrick@alpatadvertising.com</a></li>
         </ul>
     </section>
 
