@@ -30,66 +30,67 @@
         section {
             padding: 20px;
             margin-top: 20px;
-            background: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* About Us Image Container */
         .images-container img {
             width: 300px; /* Size matched to Image 1 */
-            height: auto; /* Maintain aspect ratio */
-            margin: 10px; /* Add space between images */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            cursor: pointer; /* Change cursor to indicate clickable */
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         .images-container a {
-            display: inline-block; /* Allow images to be clickable */
+            display: inline-block;
         }
 
-        /* Contact Us Styling */
-        #contact ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #contact ul li {
-            margin-bottom: 15px;
-        }
-
-        #contact h2 {
-            color: #1e3a8a; /* Metallic Blue */
-            margin-bottom: 10px;
-        }
-
-        #contact p, #contact a {
-            font-size: 1em;
-            color: #333;
-            text-decoration: none;
-        }
-
-        #contact a:hover {
-            text-decoration: underline;
-        }
-
-        #contact address {
-            margin-top: 15px;
-            font-style: normal;
-            color: #555;
-            font-size: 0.95em;
-        }
-
-        footer {
-            background-color: rgba(51, 122, 183, 0.8);
-            color: #fff;
-            text-align: center;
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
             padding: 20px;
-            font-size: 0.9em;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .modal img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .modal h3 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 1.5em;
+        }
+        .modal p {
+            color: #555;
+            text-align: center;
+            font-size: 1em;
+        }
+        .modal-close {
+            background: #ff3b3b;
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -142,17 +143,21 @@
         <h2>About AlPat Advertising</h2>
         <p>AlPat Advertising is a dynamic agency focused on innovative advertising solutions for modern businesses.</p>
         <div class="images-container">
-            <a href="details1.html" target="_blank">
-                <img src="https://i.imgur.com/WoeUT7E.jpg" alt="About Us Image 1">
-            </a>
-            <a href="details2.html" target="_blank">
-                <img src="https://i.imgur.com/xEMD9bv.jpg" alt="About Us Image 2">
-            </a>
-            <a href="details3.html" target="_blank">
-                <img src="https://i.imgur.com/QppXAlN.jpg" alt="About Us Image 3">
-            </a>
+            <img src="https://i.imgur.com/WoeUT7E.jpg" alt="About Us Image 1" onclick="openModal(1)">
+            <img src="https://i.imgur.com/xEMD9bv.jpg" alt="About Us Image 2" onclick="openModal(2)">
+            <img src="https://i.imgur.com/QppXAlN.jpg" alt="About Us Image 3" onclick="openModal(3)">
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+            <button class="modal-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
 
     <!-- Contact Us Section -->
     <section id="contact">
@@ -172,5 +177,34 @@
         <p>© 2024 AlPat Advertising. All rights reserved.</p>
     </footer>
 
+    <script>
+        function openModal(imageIndex) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+
+            modal.style.display = 'block';
+
+            if (imageIndex === 1) {
+                modalImg.src = 'https://i.imgur.com/WoeUT7E.jpg';
+                modalTitle.textContent = 'ALLELLUJAH REYES (CEO)';
+                modalText.textContent = 'She is a visionary leader with a passion for driving impactful advertising campaigns. With more than 20 years of experience in the advertising industry, she brings a wealth of knowledge and expertise to AlPat Advertising. Her unwavering commitment to company values and core Principles like creativity, innovation, and client satisfaction leads her to lead the team toward success. She fosters a culture of innovation and collaboration, empowering employees to reach their full potential and drive the agency\'s success.';
+            } else if (imageIndex === 2) {
+                modalImg.src = 'https://i.imgur.com/xEMD9bv.jpg';
+                modalTitle.textContent = 'Image 2';
+                modalText.textContent = 'Details about Image 2.';
+            } else if (imageIndex === 3) {
+                modalImg.src = 'https://i.imgur.com/QppXAlN.jpg';
+                modalTitle.textContent = 'Image 3';
+                modalText.textContent = 'Details about Image 3.';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
