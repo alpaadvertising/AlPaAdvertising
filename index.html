@@ -30,102 +30,67 @@
         section {
             padding: 20px;
             margin-top: 20px;
-            background: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* About Us Image Container */
         .images-container img {
             width: 300px; /* Size matched to Image 1 */
-            height: auto; /* Maintain aspect ratio */
-            margin: 10px; /* Add space between images */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            cursor: pointer; /* Change cursor to indicate clickable */
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         .images-container a {
-            display: inline-block; /* Allow images to be clickable */
+            display: inline-block;
         }
 
-        .modal-content {
+        /* Modal Styles */
+        .modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            overflow: auto;
-            z-index: 1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
             padding: 20px;
-        }
-
-        .modal-content.active {
-            display: block;
-        }
-
-        .modal {
-            background: #fff;
             border-radius: 10px;
-            padding: 20px;
-            max-width: 700px;
-            margin: auto;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            overflow-y: auto;
         }
-
-        .modal h3 {
-            color: #1e3a8a;
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
-        .modal p {
-            margin-top: 10px;
-            font-size: 1em;
-            color: #555;
-        }
-
-        /* Contact Us Styling */
-        #contact ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #contact ul li {
-            margin-bottom: 15px;
-        }
-
-        #contact h2 {
-            color: #1e3a8a; /* Metallic Blue */
+        .modal img {
+            width: 200px;
+            height: auto;
             margin-bottom: 10px;
+            border-radius: 10px;
         }
-
-        #contact p, #contact a {
-            font-size: 1em;
+        .modal h3 {
+            margin: 10px 0;
             color: #333;
-            text-decoration: none;
+            font-size: 1.5em;
         }
-
-        #contact a:hover {
-            text-decoration: underline;
-        }
-
-        #contact address {
-            margin-top: 15px;
-            font-style: normal;
+        .modal p {
             color: #555;
-            font-size: 0.95em;
-        }
-
-        footer {
-            background-color: rgba(51, 122, 183, 0.8);
-            color: #fff;
             text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            font-size: 1em;
+        }
+        .modal-close {
+            background: #ff3b3b;
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -178,40 +143,19 @@
         <h2>About AlPat Advertising</h2>
         <p>AlPat Advertising is a dynamic agency focused on innovative advertising solutions for modern businesses.</p>
         <div class="images-container">
-            <a href="#" onclick="showModal('modal1');">
-                <img src="https://i.imgur.com/WoeUT7E.jpg" alt="About Us Image 1">
-            </a>
-            <a href="#" onclick="showModal('modal2');">
-                <img src="https://i.imgur.com/xEMD9bv.jpg" alt="About Us Image 2">
-            </a>
-            <a href="#" onclick="showModal('modal3');">
-                <img src="https://i.imgur.com/QppXAlN.jpg" alt="About Us Image 3">
-            </a>
+            <img src="https://i.imgur.com/WoeUT7E.jpg" alt="About Us Image 1" onclick="openModal(1)">
+            <img src="https://i.imgur.com/xEMD9bv.jpg" alt="About Us Image 2" onclick="openModal(2)">
+            <img src="https://i.imgur.com/QppXAlN.jpg" alt="About Us Image 3" onclick="openModal(3)">
         </div>
     </section>
 
-    <!-- Modals -->
-    <div id="modal1" class="modal-content">
-        <div class="modal">
-            <h3>ALLELLUJAH REYES (CEO)</h3>
-            <p>She is a visionary leader with a passion for driving impactful advertising campaigns. With more than 20 years of experience in the advertising industry, she brings a wealth of knowledge and expertise to AlPat Advertising. Her unwavering commitment to company values and core principles like creativity, innovation, and client satisfaction leads her to lead the team toward success. She fosters a culture of innovation and collaboration, empowering employees to reach their full potential and drive the agency's success. She is committed to creating a positive and impactful work environment where employees feel valued and empowered. She is driven by creativity, innovation, and client satisfaction and is dedicated to making a difference through crafting compelling campaigns, building strong brands, or driving business growth.</p>
-            <button onclick="closeModal('modal1')">Close</button>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal-content">
-        <div class="modal">
-            <h3>PATRICK JASON RIVERA (Operations Manager)</h3>
-            <p>Patrick Jason Rivera (Operation Manager) is AlPat Advertising's Operations Manager, a skilled problem-solver who is always ready to adapt to changing circumstances. He is a master of logistics and resource management, ensuring that our projects have the necessary resources and support to succeed. Patrick's ability to anticipate challenges and develop effective solutions allows us to navigate the ever-changing landscape of the advertising industry with confidence and agility. He ensures the smooth and efficient running of the agency. His meticulous attention to detail and organizational skills keep our projects on track, deadlines met, and our team focused on delivering exceptional results. Patrick's dedication to streamlining processes and optimizing workflows allows us to operate with maximum efficiency, freeing up our creative teams to focus on what they do best: crafting impactful campaigns.</p>
-            <button onclick="closeModal('modal2')">Close</button>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal-content">
-        <div class="modal">
-            <h3>ALDRIN PAGBA (Team Manager)</h3>
-            <p>Aldrin Pagba (Team Manager) is AlPat Advertising's Team Manager, a dynamic leader who inspires and motivates his team to achieve their full potential. With a passion for creative excellence, Aldrin fosters a collaborative and supportive environment where team members feel empowered to push boundaries and deliver exceptional work. His ability to build strong relationships, provide clear direction, and celebrate successes makes him a highly respected and effective leader. He guides his team in developing innovative and impactful campaigns that resonate with audiences and achieve client objectives. Aldrin's deep understanding of the advertising landscape and his ability to translate client needs into creative solutions make him a valuable asset to our agency.</p>
-            <button onclick="closeModal('modal3')">Close</button>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+            <button class="modal-close" onclick="closeModal()">Close</button>
         </div>
     </div>
 
@@ -219,29 +163,48 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <ul>
-            <li>Email: <a href="mailto:contact@alpatadvertising.com">contact@alpatadvertising.com</a></li>
-            <li>Phone: (123) 456-7890</li>
-            <li>Address: 123 Advertising Ave, Creative City, CA</li>
+            <li><strong>Allellujah:</strong> <a href="mailto:allellujah@alpatadvertising.com">allellujah@alpatadvertising.com</a> | Phone: +1-555-123-4567</li>
+            <li><strong>Aldrin:</strong> <a href="mailto:aldrin@alpatadvertising.com">aldrin@alpatadvertising.com</a> | Phone: +1-555-234-5678</li>
+            <li><strong>Patrick:</strong> <a href="mailto:patrick@alpatadvertising.com">patrick@alpatadvertising.com</a> | Phone: +1-555-345-6789</li>
         </ul>
         <address>
-            We look forward to hearing from you and collaborating on your next great campaign!
+            <strong>Headquarters:</strong> 1234 Innovation Drive, Creative City, CC 56789, USA
         </address>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 AlPat Advertising. All rights reserved.</p>
+        <p>© 2024 AlPat Advertising. All rights reserved.</p>
     </footer>
 
     <script>
-        function showModal(id) {
-            document.getElementById(id).classList.add('active');
+        function openModal(imageIndex) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+
+            modal.style.display = 'block';
+
+            if (imageIndex === 1) {
+                modalImg.src = 'https://i.imgur.com/WoeUT7E.jpg';
+                modalTitle.textContent = 'ALLELLUJAH REYES (CEO)';
+                modalText.textContent = 'She is a visionary leader with a passion for driving impactful advertising campaigns. With more than 20 years of experience in the advertising industry, she brings a wealth of knowledge and expertise to AlPat Advertising. Her unwavering commitment to company values and core Principles like creativity, innovation, and client satisfaction leads her to lead the team toward success. She fosters a culture of innovation and collaboration, empowering employees to reach their full potential and drive the agency\'s success.';
+            } else if (imageIndex === 2) {
+                modalImg.src = 'https://i.imgur.com/xEMD9bv.jpg';
+                modalTitle.textContent = 'ALDRIN CASTRO (COO)';
+                modalText.textContent = 'As the Chief Operating Officer, Aldrin Castro brings over 15 years of experience in business management and operations. He is dedicated to ensuring that AlPat Advertising runs smoothly, maintaining top-tier client service and fostering an environment of efficiency and innovation. His strategic oversight has been instrumental in the company’s growth and success.';
+            } else if (imageIndex === 3) {
+                modalImg.src = 'https://i.imgur.com/QppXAlN.jpg';
+                modalTitle.textContent = 'PATRICK SMITH (CMO)';
+                modalText.textContent = 'Patrick Smith, the Chief Marketing Officer, is known for his strategic insights and creative marketing solutions. With over a decade of experience in digital marketing and brand management, he leads the team in crafting campaigns that captivate and convert audiences. His passion for impactful storytelling and trendsetting strategies drives AlPat Advertising to stay ahead of the curve.';
+            }
         }
 
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('active');
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
         }
     </script>
-
 </body>
 </html>
