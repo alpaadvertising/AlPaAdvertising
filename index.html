@@ -6,7 +6,6 @@
     <title>AlPat Advertising</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Basic Reset and Body Styles */
         * {
             margin: 0;
             padding: 0;
@@ -20,76 +19,47 @@
             background-size: 400% 400%;
             animation: gradientAnimation 15s ease infinite;
         }
-
         @keyframes gradientAnimation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         section {
             padding: 20px;
             margin-top: 20px;
-            background: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* About Us Image Container */
-        .images-container img {
-            width: 300px; /* Size matched to Image 1 */
-            height: auto; /* Maintain aspect ratio */
-            margin: 10px; /* Add space between images */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            cursor: pointer; /* Change cursor to indicate clickable */
-        }
-
-        .images-container a {
-            display: inline-block; /* Allow images to be clickable */
-        }
-
-        /* Contact Us Styling */
-        #contact ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #contact ul li {
-            margin-bottom: 15px;
-        }
-
-        #contact h2 {
-            color: #1e3a8a; /* Metallic Blue */
-            margin-bottom: 10px;
-        }
-
-        #contact p, #contact a {
-            font-size: 1em;
-            color: #333;
-            text-decoration: none;
-        }
-
-        #contact a:hover {
-            text-decoration: underline;
-        }
-
-        #contact address {
-            margin-top: 15px;
-            font-style: normal;
-            color: #555;
-            font-size: 0.95em;
-        }
-
-        footer {
-            background-color: rgba(51, 122, 183, 0.8);
-            color: #fff;
-            text-align: center;
+        .details-container {
+            display: none;
             padding: 20px;
-            font-size: 0.9em;
             margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .details-container h1 {
+            color: #1e3a8a;
+        }
+        .details-container p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -112,45 +82,31 @@
         <p>A website dedicated to helping businesses reach their target audience effectively through tailored advertising solutions.</p>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <img src="digital-marketing.jpg" alt="Digital Marketing">
-            <h3>Digital Marketing</h3>
-            <p>Helping businesses grow online through comprehensive digital strategies.</p>
-        </div>
-        <div class="service">
-            <img src="content-creation.jpg" alt="Content Creation">
-            <h3>Content Creation</h3>
-            <p>Providing engaging content that resonates with your audience.</p>
-        </div>
-        <div class="service">
-            <img src="market-analysis.jpg" alt="Market Analysis">
-            <h3>Market Analysis</h3>
-            <p>Detailed market insights to inform strategic decisions.</p>
-        </div>
-        <div class="service">
-            <img src="https://www.airwebsolutions.com/wp-content/uploads/2020/07/social-media-management.png" alt="Social Media Management">
-            <h3>Social Media Management</h3>
-            <p>Expert management to build and sustain your social media presence.</p>
-        </div>
-    </section>
-
     <!-- About Us Section -->
     <section id="about">
         <h2>About AlPat Advertising</h2>
         <p>AlPat Advertising is a dynamic agency focused on innovative advertising solutions for modern businesses.</p>
         <div class="images-container">
-            <a href="details1.html" target="_blank">
-                <img src="https://i.imgur.com/WoeUT7E.jpg" alt="About Us Image 1">
-            </a>
-            <a href="details2.html" target="_blank">
-                <img src="https://i.imgur.com/xEMD9bv.jpg" alt="About Us Image 2">
-            </a>
-            <a href="details3.html" target="_blank">
-                <img src="https://i.imgur.com/QppXAlN.jpg" alt="About Us Image 3">
-            </a>
+            <!-- Image 1 with clickable event -->
+            <div class="image-container">
+                <img src="https://imgur.com/WoeUT7E" alt="Allellujah Reyes" onclick="showDetails()">
+            </div>
+            <div class="details-container" id="details1">
+                <h1>ALLELLUJAH REYES (CEO)</h1>
+                <p>She is a visionary leader with a passion for driving impactful advertising campaigns. With more than 20 years of experience in the advertising industry, she brings a wealth of knowledge and expertise to AlPat Advertising. Her unwavering commitment to company values and core principles like <span class="highlight">creativity, innovation, and client satisfaction</span> leads her to lead the team toward success.</p>
+                <p>She fosters a culture of innovation and collaboration, empowering employees to reach their full potential and drive the agency's success. She is committed to creating a positive and impactful work environment where employees feel valued and empowered.</p>
+                <p>She is driven by her <span class="highlight">personal values of creativity, innovation, and client satisfaction</span> and is dedicated to making a difference through crafting compelling campaigns, building strong brands, and driving business growth.</p>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="image-container">
+                <img src="https://imgur.com/xEMD9bv" alt="Image 2">
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="image-container">
+                <img src="https://imgur.com/QppXAlN" alt="Image 3">
+            </div>
         </div>
     </section>
 
@@ -171,6 +127,18 @@
     <footer>
         <p>© 2024 AlPat Advertising. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for showing the details -->
+    <script>
+        function showDetails() {
+            var details = document.getElementById("details1");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
